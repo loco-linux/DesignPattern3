@@ -1,8 +1,6 @@
 package Controller;
 
-//import DiscountManager.DiscountManager;
 import java.util.ArrayList;
-import java.util.Scanner;
 import Model.IComponent;
 import Model.ICommand;
 import View.View;
@@ -20,42 +18,24 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
 
     
     public void vender(){
-    
-        Scanner teclado = new Scanner(System.in);
         ArrayList<Integer> totalYRetornoCompra = new ArrayList<>();
         ArrayList<RopaComponenteConcreto> ropa = new ArrayList<>();
         
         do{
             View.Menu_principal();
             opcionUsuario = Option.OUsuario(1, 9, 10);
-            //opcionUsuario = Option.OUsuario(9, 10);
-            //opcionUsuario = teclado.nextInt();
-            //opcionUsuario = Option.OUsuario(1, 9, 10);
-            //teclado.nextLine();
-        
         switch(opcionUsuario) {
-        //switch(Option.OUsuario(1, 9, 10)) {
             case 1 -> {
                 View.MenuCamisetas_H();
-                //int opcionUsuarioCVH = teclado.nextInt();
                 int opcionUsuarioCVH = Option.OUsuario(1, 9, 10);
-                //teclado.nextLine();
                 switch(opcionUsuarioCVH) {
-                //switch(Option.OUsuario(1, 9, 10)) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 1 -> {                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Blanca Talla S",                       
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -64,21 +44,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 2 -> {                     
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Blanca Talla M",
                           55990
-                        );
-                        
-                        
+                        );                                              
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -87,20 +59,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 3 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Blanca Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -109,20 +74,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 4 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 4 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Celeste Talla S",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -131,20 +89,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 5 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 5 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Celeste Talla M",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -153,20 +104,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 6 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 6 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Celeste Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -175,20 +119,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 7 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 7 -> {                     
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Rosada Talla S",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -198,19 +135,12 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                     }
                     
                     case 8 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Rosada Talla M",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -219,20 +149,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 9 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 9 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Rosada Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -247,23 +170,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 2 -> { 
                 View.MenuCamisetas_M();
                 int opcionUsuarioCVM = Option.OUsuario(1,9,10);
-                //int opcionUsuarioCVM = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioCVM) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 1 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Blanca Talla S",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -272,20 +186,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Blanca Talla M",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -294,20 +201,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Blanca Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 3 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Blanca Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -316,20 +216,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 4 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 4 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Celeste Talla S",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -338,20 +231,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 5 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 5 -> {                    
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Celeste Talla M",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -360,20 +246,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 6 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Celeste Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 6 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Celeste Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -383,19 +262,12 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                     }
                     
                     case 7 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla S");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Rosada Talla S",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -404,20 +276,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 8 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla M");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 8 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Rosada Talla M",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -426,20 +291,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 9 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Rosada Talla L");
-                        ropaObjeto.setPrecioPrenda(55990);*/
-                        
+                    case 9 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Rosada Talla L",
                           55990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -453,23 +311,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 3 -> {
                 View.MenuPantalon_H();
                 int opcionUsuarioPVH = Option.OUsuario(1,3,4);
-                //int opcionUsuarioPVH = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioPVH) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Azul Marino Talla 46");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 1 -> {                     
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Azul Marino Talla 46",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -478,20 +327,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Azul Marino Talla 48");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Azul Marino Talla 48",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -500,20 +342,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir HOMBRE");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Azul Marino Talla 50");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 3 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir HOMBRE",
                            "Tommy Hilfiger",
                              "Azul Marino Talla 50",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -527,23 +362,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 4 -> {
                 View.MenuPantalon_M();
                 int opcionUsuarioPVM = Option.OUsuario(1,3,4);
-                //int opcionUsuarioPVM = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioPVM) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Beige Talla 42");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 1 -> {                         
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Beige Talla 42",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -552,20 +378,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Beige Talla 44");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Beige Talla 44",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -574,20 +393,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Pantalon de Vestir MUJER");
-                        ropaObjeto.setMarcaRopa("Tommy Hilfiger");
-                        ropaObjeto.setModeloRopa("Beige Talla 48");
-                        ropaObjeto.setPrecioPrenda(60990);*/
-                        
+                    case 3 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Pantalon de Vestir MUJER",
                            "Tommy Hilfiger",
                              "Beige Talla 48",
                           60990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -601,23 +413,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 5 -> {
                 View.MenuFutbol_H();
                 int opcionUsuarioCFH = Option.OUsuario(1,3,4);
-                //int opcionUsuarioCFH = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioCFH) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol HOMBRE");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla S");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
+                    case 1 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol HOMBRE",
                            "Adidas",
                              "COLO-COLO Talla S",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -626,20 +429,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol HOMBRE");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla M");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol HOMBRE",
                            "Adidas",
                              "COLO-COLO Talla M",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -648,20 +444,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol HOMBRE");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla L");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
+                    case 3 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol HOMBRE",
                            "Adidas",
                              "COLO-COLO Talla L",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -675,23 +464,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 6 -> {
                 View.MenuFutbol_M();
                 int opcionUsuarioCFM = Option.OUsuario(1,3,4);
-                //int opcionUsuarioCFM = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioCFM) {
                     case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol MUJER");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla S");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol MUJER",
                            "Adidas",
                              "COLO-COLO Talla S",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -700,20 +480,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol MUJER");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla M");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol MUJER",
                            "Adidas",
                              "COLO-COLO Talla M",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -722,20 +495,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Camiseta de Futbol MUJER");
-                        ropaObjeto.setMarcaRopa("Adidas");
-                        ropaObjeto.setModeloRopa("COLO-COLO Talla L");
-                        ropaObjeto.setPrecioPrenda(59990);*/
-                        
+                    case 3 -> {                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Camiseta de Futbol MUJER",
                            "Adidas",
                              "COLO-COLO Talla L",
                           59990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -749,23 +515,14 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
             case 7 -> {
                 View.MenuZapatillas();
                 int opcionUsuarioZD = Option.OUsuario(1,6,7);
-                //int opcionUsuarioZD = teclado.nextInt();
-                //teclado.nextLine();
                 switch(opcionUsuarioZD) {
-                    case 1 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Talla 40");
-                        ropaObjeto.setPrecioPrenda(99990);*/
-                        
+                    case 1 -> {                  
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Talla 40",
                           99990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -774,20 +531,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 2 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Talla 42");
-                        ropaObjeto.setPrecioPrenda(99990);*/
-                        
+                    case 2 -> {                       
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Talla 42",
                           99990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -796,20 +546,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 3 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Talla 44");
-                        ropaObjeto.setPrecioPrenda(99990);*/
-                        
+                    case 3 -> {                      
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Talla 44",
                           99990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -818,20 +561,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 4 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Mercury Talla 40");
-                        ropaObjeto.setPrecioPrenda(129990);*/
-                        
+                    case 4 -> {                  
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Mercury Talla 40",
                           129990
-                        );
-                        
+                        );                       
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -840,20 +576,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 5 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Mercury Talla 42");
-                        ropaObjeto.setPrecioPrenda(129990);*/
-                        
+                    case 5 -> {                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Mercury Talla 42",
                           129990
-                        );
-                        
+                        );                       
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -862,20 +591,13 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                         ropa.add(ropaObjeto);
                     }
                     
-                    case 6 -> {
-                        /*ropaObjeto = new RopaComponenteConcreto();
-                        ropaObjeto.setTipoRopa("Zapatillas Deportivas UNISEX");
-                        ropaObjeto.setMarcaRopa("Nike");
-                        ropaObjeto.setModeloRopa("AirZoom Mercury Talla 44");
-                        ropaObjeto.setPrecioPrenda(129990);*/
-                        
+                    case 6 -> {                        
                         ropaObjeto = new RopaComponenteConcreto(
                             "Zapatillas Deportivas UNISEX",
                            "Nike",
                              "AirZoom Mercury Talla 44",
                           129990
-                        );
-                        
+                        );                        
                         totalYRetornoCompra.add(getPrecioPrenda());
                         System.out.println("Usted esta llevando: ");
                         System.out.println("Tipo de Prenda: "+ropaObjeto.getTipoRopa());
@@ -903,8 +625,6 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                 System.out.println("===============================================");
                 System.out.println("Desea confirmar la compra? Digite [1] Si | [2] No");
                 int confirmarCompra = Option.OUsuario(1,2,0);
-                //int confirmarCompra = teclado.nextInt();
-                //teclado.nextLine();
                 if(confirmarCompra == 1) {
                     System.out.println("Usted ha sido seleccionado para un descuento exclusivo en el total de su boleta");
                     this.ejecutar(totalAPagar); // INTERFACE C O M M A N D
@@ -932,7 +652,7 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
         
         }while(opcionUsuario != 9);
         
-        teclado.close();
+        
     }
     
     public RopaComponenteConcreto() {

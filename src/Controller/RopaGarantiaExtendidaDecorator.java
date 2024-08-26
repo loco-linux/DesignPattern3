@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.RopaDecorator;
-import java.util.Scanner;
 import Model.IComponent;
 import View.Option;
 
@@ -16,12 +15,10 @@ public class RopaGarantiaExtendidaDecorator extends RopaDecorator {
 
     @Override
     public void extra(int total) {
-        Scanner teclado = new Scanner(System.in);
+  
         int costeGarantia = 20000;
         System.out.println("----------------------- === GARANTIA EXTENDIDA === -----------------------");
         System.out.println("Desea usted aplicar una Garantia Extendida a su(s) producto(s)? [1] Si | [2] No");
-        //int opcionUsuario = teclado.nextInt();
-        //teclado.nextLine();
         int opcionUsuario = Option.OUsuario(1, 2, 0);        
         if(opcionUsuario == 1){
             System.out.println("""

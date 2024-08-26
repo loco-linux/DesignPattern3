@@ -21,7 +21,7 @@ public class Option {
         return xDefecto;
     }
     
-    
+    /*
     public static int OUsuario(int max, int xDefecto){
         teclado.reset();
         String entrada = teclado.nextLine();
@@ -39,4 +39,5 @@ public class Option {
         }               
         return xDefecto;
     }
+*/
 }
