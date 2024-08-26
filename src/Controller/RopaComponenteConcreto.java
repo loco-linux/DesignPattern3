@@ -27,8 +27,10 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
         
         do{
             View.Menu_principal();
-            //opcionUsuario = teclado.nextInt();
             opcionUsuario = Option.OUsuario(1, 9, 10);
+            //opcionUsuario = Option.OUsuario(9, 10);
+            //opcionUsuario = teclado.nextInt();
+            //opcionUsuario = Option.OUsuario(1, 9, 10);
             //teclado.nextLine();
         
         switch(opcionUsuario) {
@@ -900,7 +902,7 @@ public class RopaComponenteConcreto implements IComponent, ICommand{
                 System.out.println("Total a Pagar : $ "+totalAPagar);
                 System.out.println("===============================================");
                 System.out.println("Desea confirmar la compra? Digite [1] Si | [2] No");
-                int confirmarCompra = Option.OUsuario(1,2,3);
+                int confirmarCompra = Option.OUsuario(1,2,0);
                 //int confirmarCompra = teclado.nextInt();
                 //teclado.nextLine();
                 if(confirmarCompra == 1) {
